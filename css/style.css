@@ -132,15 +132,17 @@ h4 {
 }
 
 p {
-  font-size: 0.875em;
-  line-height: 1.25em;
-
-
+  font-size: .875em;
+  line-height: 1.285;
 }
 
-img {}
+img {
+  width: 100%;
+}
 
-figure {}
+figure {
+  margin:0;
+}
 
 address {
 
@@ -170,6 +172,14 @@ footer {
 header {
   padding: 15px 0;
 
+}
+
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 header .content-wrapper {
@@ -214,8 +224,8 @@ header nav ul li {
 }
 
 footer {
-  flex-direction: column;
   text-align: center;
+  flex-direction: column;
 
 }
 
@@ -259,13 +269,17 @@ footer .copyright {
   line-height: 43px;
   font-weight: 500;
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  font-size: 2.25em;
+  font-size: 3em;
 
 }
 
 /*HERO AREA*/
 
 .hero-area {
+  background: url('C:/Users/shana/Documents/unplugged-boilerplate/img/unplugged-retreat.jpg') center no-repeat #333;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -296,6 +310,9 @@ aside .form {
 /*****Features*****/
 
 .features {
+  background: url('C:/Users/shana/Documents/unplugged-boilerplate/img/unplugged-retreat-features.jpg') center no-repeat #333;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -511,14 +528,26 @@ input[type=button] {
 @media only screen and (min-width: 768px) {
 
   /**********************************TABLET STYLES HERE**********************************/
-  content-wrapper {
-    width: 640px;
+  .content-wrapper {
+    max-width: 640px;
     margin: 100px 0;
   }
 
   header {
     padding: 33px 0;
     justify-content: space-around;
+  }
+
+  header figure {
+    width: 30%;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;*/
+  }
+
+  .hero-area {
+    min-height: 600px;
   }
 
   hero.area h1 {
@@ -589,10 +618,10 @@ input[type=button] {
   }
 
   .features article {
-    justify-content: center;
     display: flex;
-    flex-flow: column wrap;
+    justify-content: center;
     align-items: center;
+    flex-flow: column wrap;
     flex-basis: 50%;
   }
 
@@ -603,12 +632,24 @@ input[type=button] {
 
   /*REVIEWS*/
   .reviews article {
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
   }
 
+  .reviews h2 {
+    width: 85%;
+  }
+
+
+  .reviews article figure,
   .reviews article div {
-    width: 50%;
+    width: 49%;
+  }
+
+  
+  .reviews h3 {
+    width: 75%;
+    margin: 0;
   }
 
   /*FOOTER*/
@@ -713,6 +754,7 @@ ABOUT PAGE
  header {
     padding: 15px 0;
   }
+
 
   .content-wrapper {
     max-width: 960px;
