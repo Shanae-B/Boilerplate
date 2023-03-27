@@ -183,40 +183,35 @@ header figure {
 }
 
 header .content-wrapper {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 0;
-
 }
 
 .header-divider {
-  width: 100%;
+  background: #3a3a3a; 
   height: 1px;
+  width: 100%;
   margin: 10px 0 20px 0;
-  color: #3a3a3a;
-
-
 }
 
 header nav {
+  width: 60%;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-  width: 60%;
-  font-size: 1.125em;
-  font-weight: bold;
-  font-weight: 700;
-  text-transform: uppercase;
-
 }
 
 header nav ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 100%;
 }
 
 header nav ul li {
@@ -600,14 +595,17 @@ input[type=button] {
 
   }
 
-  header .content-wrapper {
-    justify-content: space-between;
-    width: 100%;
+  header {
+    justify-content: space-around;
+    padding: 33px 0;
+  }
 
+  header .content-wrapper {
+    width: 100%;
+    justify-content: space-between;
   }
 
   header figure {
-
     width: 30%;
   }
 
